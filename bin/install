@@ -67,6 +67,9 @@ install_php() {
     fi
   fi
 
+  echo "Configure options:"
+  echo "$configure_options"
+
   echo "Downloading source code..."
   download_source $install_type $version $source_path
 
@@ -149,6 +152,7 @@ construct_configure_options() {
     --with-mysqli=mysqlnd \
     --with-pdo-mysql=mysqlnd \
     --with-xmlrpc \
+    --with-xsl \
     --with-zip \
     --with-zlib \
     --without-snmp"
